@@ -1,0 +1,187 @@
+<html>
+<head>
+<title>merry kwismos<3!</title>
+<style>
+body {
+    background-image: url('xmas3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 50px;
+    margin-top: 30px;
+    padding: 0;
+}
+
+h1{
+  font-family: Curlz MT;
+}
+h2, p {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 40px; 
+    text-align: center;
+    color: red;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.text {
+    max-width: 600px;
+    font-size: 20px; 
+    text-align: left;
+    color: green;
+}
+
+.button {
+    font-size: 20px; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    width: 150px; 
+    height: 30px; 
+    color: green;  
+    border: 2px solid red; 
+    background-color: transparent; 
+    text-decoration: none; 
+    display: inline-block; 
+    transition: background-color 0.3s ease;
+}
+
+.button:hover { 
+    background-color: green; 
+    color: white;
+}
+
+hr {
+    width: 60%;
+}
+
+img {
+    width: 15%; 
+    height: 25%; 
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+/* Snowflake Animation */
+#snowflakes-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: lightblue;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(173, 216, 230, 0.8);
+    opacity: 0.8;
+    animation: fall 5s linear infinite, sway 2s ease-in-out infinite alternate;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-500vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(500vh);
+        opacity: 0;
+    }
+}
+
+@keyframes sway {
+    0% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Snowflakes Container -->
+<div id="snowflakes-container"></div>
+
+<h1>tis dat time of da yearr!</h1>
+
+<div class="container">
+<img id="myImage" 
+    src="xmas21.jpg"
+    alt="Description" class="image">
+<div class="text">
+<h2>Merry Quizmoz <3</h2>
+<p>
+it's finally time to switch from your regular anxiety funk to your fancy christmas anxiety with the red and green combo funk on!! unpack your giftz and momentarily say sayonara to the burdens of reality, cause.. it's quizmoz time!!!!!!!!!! wishing you a warm, gentle and merry day today <3 
+</p>
+</div>
+</div>
+
+<h2 style="font-size:12px; font-style:italic; color:brown; text-align:center;">
+there's this saying that goes, "There are three stages of man: he believes in Santa Claus; he does not believe in Santa Claus; he is Santa Claus.” And if you're the last one, tug up your moustache and buckle up cause I'm running right after you!
+</h2>
+
+<hr>
+
+<div style="text-align:center;">
+<a class="button" href="quizmoz.html">rudolfz nose</a>
+</div>
+
+<hr>
+
+<h2 style="font-size:15px; text-align:center; font-style:italic; color:green;">
+"you're never too old for christmas!"
+</h2>
+
+<br><br>
+
+<!-- Christmas Images -->
+<img src="xmas26.jpg">
+<img src="xmas23.jpg">
+<img src="xmas24.jpg">
+<img src="xmas27.jpg">
+<img src="xmas25.jpg">
+<img src="xmas28.jpg">
+
+<script>
+// JavaScript for Snowflakes Animation
+function createSnowflake() {
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+
+    // Randomize starting position and animation properties
+    snowflake.style.left = Math.random() * 100 + "vw"; // Random horizontal position
+    snowflake.style.animationDuration = Math.random() * 3 + 2 + "s"; // Random fall duration
+    snowflake.style.animationDelay = Math.random() * 2 + "s"; // Random delay for staggered snowflakes
+
+    document.getElementById("snowflakes-container").appendChild(snowflake);
+
+    // Remove the snowflake after animation ends
+    setTimeout(() => {
+        snowflake.remove();
+    }, 5000); // Matches the fall animation duration
+}
+
+// Generate snowflakes continuously
+setInterval(createSnowflake, 300); // Creates a new snowflake every 300ms
+</script>
+
+</body>
+</html>
